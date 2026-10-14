@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MediCare — Hospital Management System</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Chart.js (charts need internet access once to load this file) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <span data-icon="logo" data-size="44"></span>
+        <div>
+          <strong>MediCare</strong>
+          <small>Hospital Management System</small>
+        </div>
+      </div>
+      <nav id="nav" aria-label="Main navigation"></nav>
+      <div class="side-bottom">
+        <a href="#" class="nav-link muted" data-stub="Settings"><span data-icon="settings"></span><span>Settings</span></a>
+        <a href="#" class="nav-link muted" data-stub="Logout"><span data-icon="logout"></span><span>Logout</span></a>
+      </div>
+    </aside>
+    <div class="scrim" id="scrim"></div>
+
+    <div class="main">
+      <!-- Top navbar -->
+      <header class="topbar">
+        <button class="icon-btn burger" id="burger" aria-label="Open menu"><span data-icon="menu"></span></button>
+
+        <div class="search" id="search">
+          <span data-icon="search" data-size="18"></span>
+          <input id="search-input" type="search" autocomplete="off" placeholder="Search patients, doctors, medicines…">
+          <div class="dropdown search-results" id="search-results" hidden></div>
+        </div>
+
+        <div class="top-actions">
+          <div class="notif" id="notif">
+            <button class="icon-btn" id="notif-btn" aria-label="Notifications">
+              <span data-icon="bell" data-size="22"></span>
+              <span class="dot" id="notif-count" hidden>0</span>
+            </button>
+            <div class="dropdown notif-panel" id="notif-panel" hidden></div>
+          </div>
+          <div class="profile">
+            <span class="avatar">A</span>
+            <div class="who"><strong>Admin</strong><small>Administrator</small></div>
+          </div>
+        </div>
+      </header>
+
+      <main id="content" class="content"></main>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" hidden></div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
